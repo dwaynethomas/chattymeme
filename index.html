@@ -63,13 +63,11 @@
       window.open(document.querySelector('canvas').toDataURL());
     }
 
+// opens the file
     function handleFileSelect(evt) {
 //      var canvasWidth = 500;
 //      var canvasHeight = 500;
       var file = evt.target.files[0];
-
-
-
       var reader = new FileReader();
       reader.onload = function(fileObject) {
         var data = fileObject.target.result;
@@ -79,7 +77,7 @@
         image.onload = function() {
 
           window.imageSrc = this;
-//change nulls to
+//change nulls to topLine and bottomeline text
           redrawMeme(window.imageSrc, topLine, bottomLine);
         }
 
